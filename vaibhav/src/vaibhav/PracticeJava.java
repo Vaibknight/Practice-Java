@@ -3,39 +3,53 @@ package vaibhav;
 public class PracticeJava {
 
 	public static void main(String[] args) {
-		Pen p1 = new Pen();
-		Pen p2 = new Pen();
+		Student st = new Student();
 		
-		p1.setColor("green");
-		p2.setColor("blue");
-		p1.setTip(99);
-		p2.setTip(34);
-		System.out.println(p1.getColor());
-		System.out.println(p2.getColor());
-		System.out.println(p1.getTip());
-		System.out.println(p2.getTip());
-
+		st.Name = "Vaibhav";
+		st.Roll = 4444;
+		System.out.println(st.Name+ " "+st.Roll);
+		st.Marks[0] = 120;
+		st.Marks[1] = 50;
+		st.Marks[2] = 60;
+		
+		Student st2 = new Student(st);
+		
+		
+		
+		for(int i=0; i<3; i++) {
+			System.out.println(st.Marks[i]);
+		}
 	}
-
+	
 }
 
-class Pen {
-	private String color;
-	private int tip;
+class Student {
 	
+	String Name;
+	int Roll;
+	String pass;
+	int Marks[];
 	
-	String getColor() {
-		return this.color;
+	Student(Student st2){
+		Marks  = new int[3];
+		this.Name = Name;
+		this.Roll = Roll;
+		
 	}
 	
-	int getTip() {
-		return this.tip;
-	}
-	void setColor(String newColor) {
-		color = newColor;
+	Student (){
+		System.out.println("KKK");
+		Marks  = new int[3];
 	}
 	
-	void setTip(int newTip) {
-		tip = newTip;
+	Student(String Name){
+		this.Name = Name;
+		Marks  = new int[3];
 	}
+	
+	Student(int Roll){
+		this.Roll = Roll;
+		Marks  = new int[3];
+	}
+	
 }
