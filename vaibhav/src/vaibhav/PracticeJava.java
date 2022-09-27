@@ -14,14 +14,14 @@ public class PracticeJava {
 		st.Marks[2] = 60;
 		
 		Student st2 = new Student(st);
-		st2.Marks [2] = 200;
+		st.Marks [2] = 200;
 		st2.pass = "ii";
 		
 		
-//		for(int i=0; i<3; i++) {
-//			System.out.println(st2.Marks[i]);
-//		}
-		System.out.println(st.pass);
+		for(int i=0; i<3; i++) {
+			System.out.println(st2.Marks[i]);
+		}
+		
 	}
 	
 }
@@ -35,8 +35,11 @@ class Student {
 	
 	Student(Student st){
 		Marks  = new int[3];
-		this.Name = Name;
-		this.Roll = Roll;
+		this.Name = st.Name;
+		this.Roll = st.Roll;
+		for(int i=0; i<3; i++) {
+			this.Marks[i] = st.Marks[i];
+		}
 		
 	}
 	
