@@ -4,54 +4,22 @@ public class PracticeJava {
 
 	public static void main(String[] args) {
 		
-		Bird sparrow = new Bird();
-		sparrow.fly();
+		ar st = new ar();
+		
+		System.out.println(st.area(34,56));
+		System.out.println(st.area(39));
 	}
 	
 }
 
-class Animal {
-	String color;
+class ar {
 	
 	
-	void eat() {
-		System.out.println("eat");
+	int area (int l , int b) {
+		return l * b;
 	}
 	
-	void breathe() {
-		System.out.println("breathes");
-	}
-}
-
-class Mammal extends Animal{
-	
-	int legs;
-	
-}
-
-class Human extends Mammal{
-	
-	String Gender;
-	
-	void walk() {
-		System.out.println("walk");
-	}
-}
-
-class Fish extends Mammal{
-	
-	String Gender;
-	
-	void swim() {
-		System.out.println("swim");
-	}
-}
-
-class Bird extends Mammal{
-	
-	String Gender;
-	
-	void fly() {
-		System.out.println("fly");
+	float area(int a) {
+		return a * a;
 	}
 }
