@@ -4,8 +4,10 @@ public class PracticeJava {
 
 	public static void main(String[] args) {
 		
-		Fish dolphin = new Fish();
-		dolphin.eat();
+		Human Vaib = new Human();
+		Vaib.eat();
+		Vaib.legs = 2;
+		System.out.println(Vaib.legs);
 	}
 	
 }
@@ -23,11 +25,13 @@ class Animal {
 	}
 }
 
-class Fish extends Animal{
+class Mammal extends Animal{
 	
-	int fin;
+	int legs;
 	
-	void swim() {
-		System.out.println("swim");
-	}
+}
+
+class Human extends Mammal{
+	
+	String Gender;
 }
