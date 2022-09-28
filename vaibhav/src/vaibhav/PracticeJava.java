@@ -4,12 +4,24 @@ public class PracticeJava {
 
 	public static void main(String[] args) {
 		
-		ar st = new ar();
-		
-		System.out.println(st.area(34,56));
-		System.out.println(st.area(39));
+		Deer d = new Deer() ;
+		d.eat();
 	}
 	
+}
+
+class Animal {
+	
+	void eat() {
+		System.out.println("eat mangoes");
+	}
+}
+
+class Deer extends Animal {
+	
+	void eat() {
+		System.out.println("eat grasses");
+	}
 }
 
 class ar {
