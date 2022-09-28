@@ -4,10 +4,8 @@ public class PracticeJava {
 
 	public static void main(String[] args) {
 		
-		Human Vaib = new Human();
-		Vaib.eat();
-		Vaib.legs = 2;
-		System.out.println(Vaib.legs);
+		Bird sparrow = new Bird();
+		sparrow.fly();
 	}
 	
 }
@@ -34,4 +32,26 @@ class Mammal extends Animal{
 class Human extends Mammal{
 	
 	String Gender;
+	
+	void walk() {
+		System.out.println("walk");
+	}
+}
+
+class Fish extends Mammal{
+	
+	String Gender;
+	
+	void swim() {
+		System.out.println("swim");
+	}
+}
+
+class Bird extends Mammal{
+	
+	String Gender;
+	
+	void fly() {
+		System.out.println("fly");
+	}
 }
