@@ -7,10 +7,8 @@ public class OOPS {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Chicken c = new Chicken ();
-		c.eat();
-		c.walk();
-		System.out.println(c.color);
+		Mustang h1 = new Mustang();
+//		Hierarchial inheritance
 
 	}
 
@@ -22,8 +20,10 @@ abstract class Animal {
 	String color;
 	
 	Animal(){
-		color ="Bluish ";
+		System.out.println("Animal Connstructor is called");
 	}
+	
+	
 	
 	
 	void eat() {
@@ -36,12 +36,23 @@ abstract class Animal {
 
 class Horse extends Animal{
 	
+	Horse(){
+		System.out.println("Horse Connstructor is called");
+	}
+	
 	void changeColor(){
 		color = "Brown ";
 	}
 	
 	void walk() {
 		System.out.println("Horse walks on 4 legs");
+	}
+}
+
+class Mustang extends Horse{
+	
+	Mustang(){
+		System.out.println("Mustang Connstructor is called");
 	}
 }
 
