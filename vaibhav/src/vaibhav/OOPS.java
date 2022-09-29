@@ -10,12 +10,20 @@ public class OOPS {
 		Chicken c = new Chicken ();
 		c.eat();
 		c.walk();
+		System.out.println(c.color);
 
 	}
 
 }
 
 abstract class Animal {
+	
+	
+	String color;
+	
+	Animal(){
+		color ="Bluish ";
+	}
 	
 	
 	void eat() {
@@ -28,12 +36,20 @@ abstract class Animal {
 
 class Horse extends Animal{
 	
+	void changeColor(){
+		color = "Brown ";
+	}
+	
 	void walk() {
 		System.out.println("Horse walks on 4 legs");
 	}
 }
 
 class Chicken extends Animal{
+	
+	void changeColor(){
+		color = "White ";
+	}
 	
 	void walk() {
 		System.out.println("Chicken walks on 2 legs");
