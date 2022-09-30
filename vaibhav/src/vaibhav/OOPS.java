@@ -7,37 +7,28 @@ public class OOPS {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Soldier s = new Soldier();
+		Bear b = new Bear();
 		
-		s.walks();
+		b.eats(); 
+//		Multiple Inheritance by interface
+		
+		
 
 	}
 
 }
 
-
-interface Chess{
-	
-	void walks();
+interface Carnivore{
+	void eats();
 }
 
-class Queen implements Chess{
-	
-	public void walks() {
-		System.out.println("Queen moves up, right, down, left & moves in all direction");
-	}
+interface Herbivore{
+	void eats();
 }
 
-class Elephent implements Chess{
+class Bear implements Carnivore, Herbivore{
 	
-	public void walks() {
-		System.out.println("Elephant moves up, right, down, left");
-	}
-}
-
-class Soldier implements Chess{
-	
-	public void walks() {
-		System.out.println("Soldier moves up, right, down, left & moves in all direction");
+	public void eats() {
+		System.out.println("Bear is both carnivore and herbivore");
 	}
 }
