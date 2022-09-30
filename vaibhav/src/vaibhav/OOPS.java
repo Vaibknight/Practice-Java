@@ -18,6 +18,8 @@ public class OOPS {
 		Student s3 = new Student();
 		s3.schoolName = "MGM";
 		
+//		It overites the previous schoolname
+		
 		System.out.println(s3.schoolName);
 		
 		
