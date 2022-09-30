@@ -7,62 +7,37 @@ public class OOPS {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Mustang h1 = new Mustang();
-//		Hierarchial inheritance
+		Soldier s = new Soldier();
+		
+		s.walks();
 
 	}
 
 }
 
-abstract class Animal {
+
+interface Chess{
 	
-	
-	String color;
-	
-	Animal(){
-		System.out.println("Animal Connstructor is called");
-	}
-	
-	
-	
-	
-	void eat() {
-		System.out.println(" Animals eat");
-	}
-	
-	abstract void walk();
+	void walks();
 }
 
-
-class Horse extends Animal{
+class Queen implements Chess{
 	
-	Horse(){
-		System.out.println("Horse Connstructor is called");
-	}
-	
-	void changeColor(){
-		color = "Brown ";
-	}
-	
-	void walk() {
-		System.out.println("Horse walks on 4 legs");
+	public void walks() {
+		System.out.println("Queen moves up, right, down, left & moves in all direction");
 	}
 }
 
-class Mustang extends Horse{
+class Elephent implements Chess{
 	
-	Mustang(){
-		System.out.println("Mustang Connstructor is called");
+	public void walks() {
+		System.out.println("Elephant moves up, right, down, left");
 	}
 }
 
-class Chicken extends Animal{
+class Soldier implements Chess{
 	
-	void changeColor(){
-		color = "White ";
-	}
-	
-	void walk() {
-		System.out.println("Chicken walks on 2 legs");
+	public void walks() {
+		System.out.println("Soldier moves up, right, down, left & moves in all direction");
 	}
 }
