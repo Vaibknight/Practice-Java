@@ -11,10 +11,14 @@ public class OOPS {
 		
 		s1.schoolName = "DPS";
 		
-		System.out.println(s1.schoolName);
 		
 		Student s2 = new Student();
 		System.out.println(s2.schoolName);
+		
+		Student s3 = new Student();
+		s3.schoolName = "MGM";
+		
+		System.out.println(s3.schoolName);
 		
 		
 
