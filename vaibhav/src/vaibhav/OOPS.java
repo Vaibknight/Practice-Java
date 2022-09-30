@@ -7,10 +7,14 @@ public class OOPS {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Bear b = new Bear();
+		Student s1 = new Student();
 		
-		b.eats(); 
-//		Multiple Inheritance by interface
+		s1.schoolName = "DPS";
+		
+		System.out.println(s1.schoolName);
+		
+		Student s2 = new Student();
+		System.out.println(s2.schoolName);
 		
 		
 
@@ -18,17 +22,18 @@ public class OOPS {
 
 }
 
-interface Carnivore{
-	void eats();
-}
-
-interface Herbivore{
-	void eats();
-}
-
-class Bear implements Carnivore, Herbivore{
+class Student {
 	
-	public void eats() {
-		System.out.println("Bear is both carnivore and herbivore");
+	String name;
+	int roll;
+	
+	static String schoolName;
+	
+	void setname(String name) {
+		this.name=name;
+	}
+	
+	String getname(){
+		return this.name;
 	}
 }
